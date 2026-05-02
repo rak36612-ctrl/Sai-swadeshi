@@ -839,33 +839,5 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script>
-        $("#quoteForm").submit(function(e) {
-            e.preventDefault();  // Prevents form from refreshing the page
-    
-            let formData = {
-                fullName: $("#fullName").val(),
-                phone: $("#phone").val(),
-                email: $("#email").val(),
-                serviceDescription: $("#serviceDescription").val(),
-                message: $("#message").val()
-            };
-    
-            $.ajax({
-                url: "https://saiswadeshi.in/send-sms",
-                type: "POST",
-                contentType: "application/json",
-                data: JSON.stringify(formData),
-                success: function(response) {
-                    alert("Your details have been submitted! Admin will be notified.");
-                    $("#quoteForm")[0].reset();
-                },
-                error: function(error) {
-                    alert("Error sending data!");
-                }
-            });
-        });
-    </script>
-
 </body>
 </html>
