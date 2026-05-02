@@ -1,13 +1,15 @@
-$(document).ready(function () {
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: false,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      items: 1
+if (typeof $ !== 'undefined') {
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: false,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          items: 1
+        });
     });
-});
+}
 
   // Quick service
 
