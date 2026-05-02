@@ -106,7 +106,7 @@
     
     .owl-carousel .item,
     .owl-carousel .item img {
-        height: 60vh; /* Better fit for mobile to avoid whitespace */
+        height: 100vh; /* Stretch to fill the blank white space */
         object-fit: cover;
     }
 
