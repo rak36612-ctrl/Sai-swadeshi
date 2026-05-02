@@ -170,14 +170,14 @@ if (contactFormEl) {
         const phone = document.getElementById("phone").value;
         const email = document.getElementById("email").value;
         const message = document.getElementById("message").value;
-        const recaptchaResponse = grecaptcha.getResponse(); // Get reCAPTCHA response
+        // const recaptchaResponse = grecaptcha.getResponse(); // Get reCAPTCHA response
 
-        if (!recaptchaResponse) {
-            alert("Please complete the reCAPTCHA.");
-            return;
-        }
+        // if (!recaptchaResponse) {
+        //     alert("Please complete the reCAPTCHA.");
+        //     return;
+        // }
 
-        const formData = { name, phone, email, message, recaptchaResponse };
+        const formData = { name, phone, email, message }; // Removed recaptchaResponse
 
         try {
             const response = await fetch("https://sai-swadeshi.onrender.com/api/contact", {

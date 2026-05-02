@@ -59,14 +59,14 @@ app.get('/', (req, res) => {
 app.post("/contact", async (req, res) => {
     const { name, phone, email, message, recaptchaResponse } = req.body;
 
-    if (!recaptchaResponse) {
-        return res.status(400).json({ error: "reCAPTCHA verification failed" });
-    }
+    // if (!recaptchaResponse) {
+    //     return res.status(400).json({ error: "reCAPTCHA verification failed" });
+    // }
 
-    const isHuman = await verifyRecaptcha(recaptchaResponse);
-    if (!isHuman) {
-        return res.status(400).json({ error: "reCAPTCHA verification failed" });
-    }
+    // const isHuman = await verifyRecaptcha(recaptchaResponse);
+    // if (!isHuman) {
+    //     return res.status(400).json({ error: "reCAPTCHA verification failed" });
+    // }
 
     const newContact = new Contact({ name, phone, email, message });
 
@@ -111,15 +111,15 @@ app.post("/api/contact", async (req, res) => {
     const { name, phone, email, message, recaptchaResponse } = req.body;
 
     // Verify reCAPTCHA
-    const secretKey = "6LffKfQqAAAAAPpKn11NkHtYBgP7tGlACkuZS0IE";
-    const recaptchaURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaResponse}`;
+    // const secretKey = "6LffKfQqAAAAAPpKn11NkHtYBgP7tGlACkuZS0IE";
+    // const recaptchaURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaResponse}`;
 
-    const recaptchaRes = await fetch(recaptchaURL, { method: "POST" });
-    const recaptchaData = await recaptchaRes.json();
+    // const recaptchaRes = await fetch(recaptchaURL, { method: "POST" });
+    // const recaptchaData = await recaptchaRes.json();
 
-    if (!recaptchaData.success) {
-        return res.status(400).json({ error: "reCAPTCHA verification failed" });
-    }
+    // if (!recaptchaData.success) {
+    //     return res.status(400).json({ error: "reCAPTCHA verification failed" });
+    // }
 
     // Send SMS Notification
     const smsBody = `New Contact Form Submission:\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`;
