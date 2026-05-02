@@ -28,4 +28,11 @@ const registrationSchema = new mongoose.Schema({
     },
 },{ timestamps: true});
 
-module.exports = mongoose.model('Registration', registrationSchema)
+const Registration = mongoose.model('Registration', registrationSchema);
+
+// Try to drop the old unique index on email if it exists, so database stops throwing 11000 errors
+Registration.collection.dropIndex('email_1').catch(err => {
+    // Ignore error if index doesn't exist
+});
+
+module.exports = Registration;

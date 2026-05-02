@@ -98,15 +98,20 @@
     overflow: hidden;
 }
 
-.owl-carousel .item img {
-    width: 100%;
-    height: 600px;
-    /* object-fit: cover; */
-    position: absolute;
-    top: 13%;
-    left: 0;
-    /* filter: blur(3px); Apply a light blur effect */
-    transition: filter 0.3s ease-in-out; /* Smooth transition for hover or other effects */
+/* Mobile Responsiveness for Hero Images */
+@media (max-width: 768px) {
+    .hero-container,
+    .owl-carousel .item {
+        height: auto;
+        min-height: 50vh; /* Shorter hero section on mobile to fit the screen */
+    }
+    
+    .owl-carousel .item img {
+        height: 50vh;
+        position: relative;
+        top: 0;
+        object-fit: cover; /* Prevents stretching and cropping awkwardly */
+    }
 }
 
 /* Navbar Styles */
