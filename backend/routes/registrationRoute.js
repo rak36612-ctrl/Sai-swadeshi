@@ -38,7 +38,10 @@ router.post("/", async (req, res) => {
         res.status(201).json(savedRegistration);
     } catch (error) {
         console.error("Error saving registration:", error);
-        res.status(400).json({ message: error.message });
+        if (error.code === 11000) {
+            return res.status(400).json({ message: "An inquiry with this email already exists." });
+        }
+        res.status(400).json({ message: "An error occurred while submitting your request." });
     }
 });
 
