@@ -1,0 +1,605 @@
+/* general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-image: url('img/temple1.jpg'); Change to your image path */
+    background-size: cover; /* Make the background image cover the page */
+    background-position: center center; /* Center the background image */
+    background-attachment: fixed; /* Make the background fixed when scrolling */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding-top:1px; /* Add padding for navbar height */
+}
+
+/* Hero Section (Image with Navbar Inside) */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full viewport height */
+}
+
+/* Nav bar */
+.navbar {
+  background-color: #222;
+  height: 120px; /* Custom height */
+  transition: height 0.3s ease;
+}
+
+.navbar .navbar-brand img {
+  border: 4px solid transparent;
+  /* border-image-source: linear-gradient(to right, #f39c12, #f1c40f); */
+  border-radius: 50%; /* Circular logo */
+  width: 50px;
+  height: 50%;
+}
+
+.navbar .nav-link {
+  color: white !important; /* Navbar links in white */
+  font-size: 16px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: silver; /* Silver-colored hamburger menu */
+  border-radius: 2px;
+  position: relative;
+  width: 25px;
+  height: 3px;
+  display: block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  background-color: silver;
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  border-radius: 2px;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
+}
+
+.navbar-collapse {
+  transition: height 0.3s ease; /* Smooth collapsing */
+}
+
+/* Adjust dropdown menu styles */
+.dropdown-menu {
+  background-color: #333;
+  border: none;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  background-color: #f1c40f;
+  color: black;
+}
+
+/* Mobile styles */
+@media (max-width: 991.98px) {
+  .navbar {
+      height: auto;
+  }
+
+  .navbar-collapse.show {
+      height: auto !important; /* Ensure height adjusts when expanded */
+      overflow: visible;
+  }
+}
+
+
+  /* Banner Image Section */
+  .banner {
+    margin-top: 80px; /* Ensures it starts below the fixed navbar */
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+}
+
+.banner img {
+    width: 100%;
+    height: 700px;
+    /* object-fit: cover; Ensures the image covers the section without distortion */
+}
+
+.banner-text {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.banner-text p {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+
+    .banner-text p {
+        font-size: 1rem;
+    }
+}
+
+ .package-title {
+    text-align: center;
+    margin: 20px 0 10px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.package-price {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 30px;
+} 
+
+/* .carousel img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 500px;
+} */
+
+/* .image-container {
+  text-align: center;
+  margin: 20px;
+  margin-top: 400px;
+} */
+
+/* .image-container img {
+  width: 400px;
+  height: 400px;
+  max-width: 600px; /* Adjust the image width as needed 
+  border-radius: 10px;
+} */
+
+/* /* Ensure the carousel images are displayed in the correct size */
+/* Ensure the carousel images are displayed in the correct size */
+/* Ensures images inside each carousel item are responsive */
+.carousel-inner {
+  overflow: hidden; /* Prevent carousel content from spilling outside */
+}
+
+/* Style for each image in the carousel */
+.carousel-item img {
+  width: 100%; /* Ensures images take full width of their column */
+  height: 250px; /* Adjust height as needed */
+  object-fit: cover; /* Ensures images cover the space without distortion */
+  margin-top: 400px;
+}
+
+/* Carousel control styles */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 10; /* Ensure the buttons appear above carousel content */
+  width: 50px; /* Fixed button width */
+  height: 50px; /* Fixed button height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 50%; /* Circular buttons */
+  border: none;
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%); /* Vertically center the buttons */
+}
+
+/* Position buttons outside the carousel */
+.carousel-control-prev {
+  left: 0%;
+}
+
+.carousel-control-next {
+  right: 0%;
+}
+
+/* Hover effect for the buttons */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  transform: translateY(-50%) scale(1.1); /* Slightly enlarge on hover */
+  transition: all 0.2s ease; /* Smooth transition effect */
+}
+
+/* Style the control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+}
+/* Styling the package title and price */
+/* .package-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.package-price {
+  font-size: 1.25rem;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+} */
+
+.itinerary {
+  max-width: 800px;
+  margin-right: 40px;
+  margin: auto;
+}
+
+.itinerary h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.day-section {
+  display: flex;
+  cursor: pointer;
+  /* align-items: end; */
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.day-section:hover {
+  background-color: #f1f1f1;
+}
+
+.day-section h3 {
+  margin: 0;
+  font-size: 20px;
+  flex-grow: 1;
+}
+
+.arrow {
+  margin-left: 10px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+.day-content {
+  display: none;
+  margin: 10px 0 20px 20px;
+  font-size: 16px;
+  color: #555;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.day-content ul {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.day-content li {
+  margin-bottom: 8px;
+  list-style-type: disc;
+}
+
+/* General Styles */
+.container {
+  font-family: Arial, sans-serif;
+  margin-right: 50px;
+}
+
+h3 {
+  color: #2c3e50;
+  font-size: 1.5rem; /* Font size adjusted to match the exact style in the image */
+  font-weight: bold;
+  margin-bottom: 12px; /* Reduced space to better match the image spacing */
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 30px; /* Increased left margin to align better with the image */
+}
+
+ul li {
+  margin-bottom: 10px; /* Adjusted space between list items to match the exact spacing */
+}
+
+/* Styling for the Included/Excluded Section */
+#includedExcludedSection {
+  margin-top: 40px; /* Matching space from the previous section to the new one */
+}
+
+.included-section, .excluded-section {
+  padding: 20px; /* Padding adjusted to match the visual spacing */
+  border: 1px solid #ddd;  /* Light border for sections */
+  border-radius: 8px;  /* Rounded corners to match the design in the image */
+  background-color: #f9f9f9; /* Light background for contrast */
+  box-shadow: none;  /* Removed the shadow to match the style exactly */
+}
+
+/* Column Styling */
+#includedExcludedSection .row {
+  display: flex;
+  justify-content: space-between; /* Ensures space between the columns */
+}
+
+#includedExcludedSection .col-md-6 {
+  padding-right: 20px; /* Right padding between columns to match spacing */
+}
+
+/* Specific style for Included section */
+.included-section {
+  margin-right: 20px; /* Adjusted margin to match the space between the two columns */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  #includedExcludedSection .row {
+      flex-direction: column; /* Stack the sections on small screens */
+  }
+
+  .included-section, .excluded-section {
+      margin-bottom: 20px; /* Space between stacked sections */
+  }
+
+  .included-section {
+      margin-right: 0; /* Remove right margin when stacked */
+  }
+}
+
+/* General Container */
+/* General Section Styling */
+/* General Section Styling */
+/* General Section Styling */
+.facilities-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.fsection-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Flexbox Layout for Facility Cards */
+.facility-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Facility Card Styling */
+.facility-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  flex: 0 1 calc(25% - 20px); /* 4 cards in a row */
+  max-width: calc(25% - 20px); /* Adjust for 4 cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Responsive Adjustment for Smaller Screens */
+@media (max-width: 992px) {
+  .facility-box {
+      flex: 0 1 calc(33.33% - 20px); /* 3 cards in a row */
+      max-width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .facility-box {
+      flex: 0 1 calc(50% - 20px); /* 2 cards in a row */
+      max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .facility-box {
+      flex: 0 1 100%; /* 1 card in a row */
+      max-width: 100%;
+  }
+}
+
+/* Hover Animation */
+.facility-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #007bff; /* Blue background on hover */
+  color: #fff; /* Change text color to white */
+}
+
+.facility-box:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.1);
+  animation: pulse 0.6s infinite;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+/* Keyframe Animation for Hover Effect */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 0.6;
+  }
+  50% {
+      transform: scale(1.1);
+      opacity: 0.4;
+  }
+  100% {
+      transform: scale(1.2);
+      opacity: 0;
+  }
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #007bff; /* Customize icon color */
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.facility-box:hover .icon {
+  color: #0056b3;
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Text Styling */
+.facility-box p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* .facility-box.highlighted {
+  background-color: #f39c12; /* Orange color for highlighted box 
+  color: white;
+}
+
+.facility-box.highlighted:hover {
+  background-color: #ffd700; /* Turn yellow on hover 
+  color: #000; /* Black text for contrast 
+} */
+
+/* Icon Styling */
+/* .facility-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+} */
+
+/* Text Styling */
+/* .facility-box p {
+  margin: 0;
+  font-size: 1rem;
+  color: #2c3e50;
+} */
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .facility-box {
+    flex: 0 0 calc(50% - 20px); /* Two columns on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .facility-box {
+    flex: 0 0 100%; /* Single column on mobile */
+  }
+}
+
+/* Refund Policy Section */
+.refund-policy-section {
+  padding: 20px 0;
+  background-color: #fff; /* Matches the previous section's background */
+  margin-top: 20px; /* Provides spacing below the facilities section */
+}
+
+.refund-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: left; /* Aligns title to the left */
+}
+
+.refund-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left; /* Aligns text to the left */
+  max-width: 50%; /* Restricts the width to one side */
+}
+
+/* Book Now Button */
+.book-now-button {
+  margin-top: 20px;
+  text-align: center; /* Aligns the button to the left */
+}
+
+.book-now-button .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #f39c12; /* Button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.book-now-button .btn:hover {
+  background-color: #d35400; /* Hover color */
+  text-decoration: none;
+}
+
+/* footer */
+/* Style for the links to display in one line and remove underlines */
+.col-lg-3 .btn-link {
+  display: inline-block; /* Makes links display on the same line */
+  margin-right: 15px; /* Adds some space between the links */
+  text-decoration: none; /* Removes the underline from the links */
+  color: #fff; /* Sets text color to white (or choose your desired color) */
+}
+
+.col-lg-3 .btn-link:hover {
+  text-decoration: none; /* Ensures there's no underline on hover */
+}

@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Ensure that the proxy module is enabled in your Apache configuration (mod_proxy and mod_proxy_http).
+
+# Forward /api requests to the Node.js server running on port 5000
+RewriteRule ^api/(.*)$ http://127.0.0.1:5000/api/$1 [P,L]
+
+# Forward other existing backend routes
+RewriteRule ^contact$ http://127.0.0.1:5000/contact [P,L]
+RewriteRule ^send-sms$ http://127.0.0.1:5000/send-sms [P,L]
+
+# Optional: Force HTTPS
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

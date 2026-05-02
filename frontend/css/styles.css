@@ -1,0 +1,1510 @@
+/* .logo-icon {
+    
+ animation: rotate 3s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {0
+        transform: rotate(360deg);
+    }
+} */
+
+ /* Global Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  .carousel-item {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+   /* Enable dropdown on hover */
+/* .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+     margin-top: 0; /* Aligns the dropdown with the parent  
+  } */
+  
+  /*  Style adjustments for dropdown menu  */
+  /* .dropdown-menu {
+    border-radius: 0.5rem;
+    background-color: #f8f9fa;
+  }
+  .dropdown-item:hover {
+    background-color: #e9ecef;
+  } */
+
+  /* .carousel-item img {
+    height: 20px;
+    object-fit: cover;
+  }
+
+  .carousel-caption h1, .carousel-caption p {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .carousel-caption h1 {
+    font-size: 3rem;
+    align-items: center;
+  }
+
+  .carousel-caption p {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption .btn {
+    background-color: #ff3366;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+  }  */
+
+  body {
+    /* background-image: url('img/temple1.jpg'); Change to your image path */
+    background-size: cover; /* Make the background image cover the page */
+    background-position: center center; /* Center the background image */
+    background-attachment: fixed; /* Make the background fixed when scrolling */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding-top:1px; /* Add padding for navbar height */
+}
+
+/* Hero Section (Image with Navbar Inside) */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full viewport height */
+}
+
+.owl-carousel .item {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.owl-carousel .item img {
+    width: 100%;
+    height: 600px;
+    /* object-fit: cover; */
+    position: absolute;
+    top: 13%;
+    left: 0;
+    /* filter: blur(3px); Apply a light blur effect */
+    transition: filter 0.3s ease-in-out; /* Smooth transition for hover or other effects */
+}
+
+/* Navbar Styles */
+/* .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure the navbar appears on top of the image 
+    background: rgba(255, 255, 255, 0.7); /* Transparent background for the navbar 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for visibility 
+    padding: 10px 0;
+} */
+
+/* .navbar .navbar-brand .logo-icon {
+    width: 40px; /* Adjust logo size 
+    height: auto;
+} */
+
+/* .navbar-nav .nav-link {
+    font-weight: 600;
+    color:  #f8f9fa;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    transition: all 0.3s ease-in-out;
+} */
+/* .navbar .navbar-brand {
+    margin-right: 10px; /* Reduce space between logo and navbar items *
+    padding-right: 0; /* Remove unnecessary padding 
+}  */
+
+/* .navbar-nav .nav-link:hover {
+    color: #007bff; /* Hover effect color 
+} */
+
+/* Navbar Toggler (hamburger menu) */
+/* .navbar-toggler {
+    border: none;
+    background: transparent;
+}
+
+.navbar-toggler-icon {
+    background-color: #333; /* Color of the hamburger icon 
+} */
+
+/* Call Us Button */
+/* .navbar .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 12px 20px;
+    border-radius: 25px;
+} */
+
+/* .navbar .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+} */
+
+/* .navbar-nav .nav-link.active {
+    color: white !important; /* Ensure active link stays white 
+    text-decoration: underline; /* Optional: underline for active link 
+} */
+
+/* Navbar Styles */
+ /* .navbar {
+    position: fixed;
+    z-index: 10; /* Ensure it is above the content  
+    width: 100%;
+    background: #242526;
+} */
+
+/* nav .wrapper {
+    position: relative;
+    max-width: 1300px;
+    padding: 10px 30px;
+    height: 120px; /* Increased height of navbar  
+    line-height: 120px; /* Match the height for vertical centering 
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper .logo a {
+    color: #f2f2f2;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.wrapper .nav-links {
+    display: inline-flex;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: #3A3B3C;
+}
+
+.nav-links .mobile-item {
+    display: none;
+}
+
+.nav-links .drop-menu {
+    position: absolute;
+    background: #242526;
+    width: 180px;
+    line-height: 45px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box {
+    transition: all 0.3s ease;
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.drop-menu li a {
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0px;
+}
+
+.mega-box {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mega-box .content {
+    background: #242526;
+    padding: 25px 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mega-box .content .row {
+    width: calc(25% - 30px);
+    line-height: 45px;
+}
+
+.content .row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content .row header {
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content .row .mega-links {
+    margin-left: -40px;
+    border-left: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.row .mega-links li {
+    padding: 0 20px;
+}
+
+.row .mega-links li a {
+    padding: 0px;
+    padding: 0 20px;
+    color: #d9d9d9;
+    font-size: 17px;
+    display: block;
+}
+
+.row .mega-links li a:hover {
+    color: #f2f2f2;
+}
+
+.wrapper .btn {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.wrapper .btn.close-btn {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+
+/* Responsive Styles 
+@media screen and (max-width: 970px) {
+    .wrapper .btn {
+        display: block;
+    }
+
+    .wrapper .nav-links {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 350px;
+        top: 0;
+        left: -100%;
+        background: #242526;
+        display: block;
+        padding: 50px 10px;
+        line-height: 50px;
+        overflow-y: auto;
+        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+        transition: all 0.3s ease;
+    }
+
+    /* Custom Scrollbar 
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #242526;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #3A3B3C;
+    }
+
+    #menu-btn:checked ~ .nav-links {
+        left: 0%;
+    }
+
+    #menu-btn:checked ~ .btn.menu-btn {
+        display: none;
+    }
+
+    #close-btn:checked ~ .btn.menu-btn {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 15px 10px;
+    }
+
+    .nav-links li a {
+        padding: 0 20px;
+        display: block;
+        font-size: 20px;
+    }
+
+    .nav-links .drop-menu {
+        position: static;
+        opacity: 1;
+        top: 65px;
+        visibility: visible;
+        padding-left: 20px;
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        box-shadow: none;
+        transition: all 0.3s ease;
+    }
+
+    #showDrop:checked ~ .drop-menu,
+    #showMega:checked ~ .mega-box {
+        max-height: 100%;
+    }
+
+    .nav-links .desktop-item {
+        display: none;
+    }
+
+    .nav-links .mobile-item {
+        display: block;
+        color: #f2f2f2;
+        font-size: 20px;
+        font-weight: 500;
+        padding-left: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links .mobile-item:hover {
+        background: #3A3B3C;
+    }
+
+    .drop-menu li {
+        margin: 0;
+    }
+
+    .drop-menu li a {
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    .mega-box {
+        position: static;
+        top: 65px;
+        opacity: 1;
+        visibility: visible;
+        padding: 0 20px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .mega-box .content {
+        box-shadow: none;
+        flex-direction: column;
+        padding: 20px 20px 0 20px;
+    }
+
+    .mega-box .content .row {
+        width: 100%;
+        margin-bottom: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mega-box .content .row:nth-child(1),
+    .mega-box .content .row:nth-child(2) {
+        border-top: 0px;
+    }
+
+    .content .row .mega-links {
+        border-left: 0px;
+        padding-left: 15px;
+    }
+
+    .row .mega-links li {
+        margin: 0;
+    }
+
+    .content .row header {
+        font-size: 19px;
+    }
+}
+
+nav input {
+    display: none;
+} */
+
+/* Navbar Styles */
+
+.navbar {
+    background-color: #222;
+    height: 120px; /* Custom height */
+    transition: height 0.3s ease;
+}
+
+.navbar .navbar-brand img {
+    border: 4px solid transparent;
+    /* border-image-source: linear-gradient(to right, #f39c12, #f1c40f); */
+    border-radius: 50%; /* Circular logo */
+    width: 50px;
+    height: 50%;
+}
+
+.navbar .nav-link {
+    color: white !important; /* Navbar links in white */
+    font-size: 16px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: silver; /* Silver-colored hamburger menu */
+    border-radius: 2px;
+    position: relative;
+    width: 25px;
+    height: 3px;
+    display: block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    background-color: silver;
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    border-radius: 2px;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+.navbar-collapse {
+    transition: height 0.3s ease; /* Smooth collapsing */
+}
+
+/* Adjust dropdown menu styles */
+.dropdown-menu {
+    background-color: #333;
+    border: none;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #f1c40f;
+    color: black;
+}
+
+/* Mobile styles */
+@media (max-width: 991.98px) {
+    .navbar {
+        height: auto;
+    }
+
+    .navbar-collapse.show {
+        height: auto !important; /* Ensure height adjusts when expanded */
+        overflow: visible;
+    }
+}
+
+  
+/* Owl Carousel Text Overlay (Carousel Caption) */
+.carousel-caption {
+    font-family: 'Georgia', serif;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-15%, -30%);
+    color: whitesmoke;
+    text-align: center;
+    /* backdrop-filter: blur(2px); Blurs the area behind the text */
+    /* background: rgba(0, 0, 0, 0.5); */
+}
+
+.carousel-caption h1 {
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Mobile Adjustments */
+ @media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 32px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
+    }
+} 
+
+.single-line {
+    display: inline-block; /* Ensures the text stays on one line */
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    font-size: 48px; /* Adjust size as needed */
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Adds spacing between letters */
+    
+}
+
+.centered-text {
+    font-size: 48px; /* Adjust size as needed */
+    font-weight: bold;
+    letter-spacing: 2px; /* Adds spacing between letters */
+    text-transform: uppercase;
+    margin: 0; /* Ensures no extra spacing */
+}
+
+/* Quick Service Section */
+/* .quick-service-section {
+    position: absolute; /* Keep it relative to the hero section 
+    bottom: -200px; /* Distance from the bottom of the carousel 
+    left: 50%; /* Center horizontally
+    transform: translate(-50%, 0); /* Ensure perfect centering 
+    width: 90%; /* Adjust width as needed 
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Ensure it stays above the carousel 
+} */
+
+/* .quick-service-section h3 {
+    font-size: 1.5rem;
+    color: #dc3545;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+} */
+
+/* .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+} */
+
+/* .form-control:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+} */
+
+ /* .btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s ease;
+} 
+
+.btn-danger:hover {
+    background-color: #c82333;
+} */
+
+/* .card-body {
+    text-align: center;
+} */
+
+.carousel-heading h2{
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 30px 0;
+    margin-top: 800px;
+}
+
+.carousel-heading h4{
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 30px 0;
+    margin-top: 90px;
+}
+
+
+/* Adjusting carousel styles for proper spacing */
+.carousel-item {
+    /* background-color: hsl(262, 19%, 77%); White background for each carousel item */
+    background-color: hsl(263, 44%, 96%);    
+    padding: 10px;
+    border-radius: 10px; /* Optional: Adds rounded corners to each carousel item */
+}
+
+.card {
+    margin: 10px auto; 
+    /* Centers the cards and provides spacing between them */
+    height: 450px;  
+    width: 450px;  
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner {
+    overflow: hidden; /* Prevent carousel content from spilling outside */
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 220px;
+    object-fit: cover; /* Ensures the image fits well */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Style the carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 10; /* Ensure the buttons appear above carousel content */
+    width: 50px; /* Fixed button width */
+    height: 50px; /* Fixed button height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background */
+    border-radius: 50%; /* Make the buttons circular */
+    border: none; /* Remove any default border */
+    position: absolute; /* Proper positioning */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+}
+
+/* Position buttons outside the carousel */
+.carousel-control-prev {
+    left: 0%; /* Move the "previous" button slightly outside the carousel */
+}
+
+.carousel-control-next {
+    right: 0%; /* Move the "next" button slightly outside the carousel */
+}
+
+/* Hover effect for the buttons */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge on hover */
+    transition: all 0.2s ease; /* Smooth transition effect */
+}
+
+/* Style the control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+    background-size: 100%; /* Ensure icons fill their container */
+    filter: invert(1); /* Make the icons white for better visibility */
+}
+
+
+.btn {
+    color: #fff; /* Set text color to white */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it behave like a button */
+    padding: 10px 20px; /* Add padding for a button look */
+    font-size: 1rem; /* Adjust font size */
+    border-radius: 5px; /* Optional: Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.btn-primary {
+    background-color: #dc3545;
+    border: none;
+    transition: background-color 0.3s ease;
+    color: #fff ;
+}
+
+.btn-primary:hover {
+    background-color: #dc3545;
+}
+
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+    .carousel-inner .row {
+        flex-direction: column;
+    }
+
+    .carousel-inner .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block; /* Show toggler for small screens */
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+    }
+
+    .navbar-toggler[aria-expanded="true"] + .navbar-nav {
+        display: flex; /* Show menu when toggler is clicked */
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .quick-service-section {
+        bottom: -100px;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .btn-danger {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Statistics Section */
+.statistics {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.stat {
+    flex: 1 1 20%;
+    max-width: 20%;
+    padding: 1rem;
+    animation: fadeInUp 1s ease forwards; /* Smooth fade-in and slide up */
+    animation-delay: var(--delay); /* Custom delay for each card */
+}
+
+.stat h2 {
+    font-size: 2.5rem;
+    color: #ff3366;
+    margin: 0.5rem 0;
+}
+
+.stat p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Reasons Section */
+.reasons-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.reasons-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Styling for Reason Cards */
+.reason {
+    flex: 1 1 30%;
+    max-width: 30%;
+    width: 190px; /* Fixed width to make it square */
+    height: 190px; /* Fixed height to make it square */
+    background-color: #f8f9fa; /* Light gray background */
+    border: 2px solid #ddd; /* Add a border */
+    border-radius: 12px; /* Optional: Adds rounded corners */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 10px; /* Adds spacing between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.reason:hover {
+    transform: scale(1.1); /* Slightly enlarge the card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a deeper shadow */
+    background-color: #007bff; /* Change background color */
+    color: #ffffff; /* Change text color to white */
+}
+
+/* Styling the Icon Inside the Card */
+.reason .icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #007bff; /* Default icon color */
+}
+
+.reason:hover .icon {
+    transform: rotate(360deg); /* Add a rotation effect */
+    color: #ffffff; /* Change icon color to white */
+}
+
+/* Styling the Text Inside the Card */
+.reason p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.reason:hover p {
+    color: #ffffff; /* Change text color to white */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stat, .reason {
+        flex: 1 1 45%; /* Adjust size for smaller screens */
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat, .reason {
+        flex: 1 1 100%; /* Stack on top of each other for very small screens */
+        max-width: 100%;
+    }
+
+    .stat h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stat {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* General Section Styling */
+.google-reviews {
+    background-color: #fff;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.google-reviews .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Left Text Section */
+.googlereview-info h2 {
+    color: #c84563;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.googlereview-info p {
+    color: #6c757d;
+    font-size: 1.2rem;
+}
+
+/* Review Card Styling */
+.googlereview-card {
+    flex: 1 1 10%;
+    text-align: center;
+}
+
+.gcard {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.gcard:hover {
+    transform: translateY(-5px);
+}
+
+/* Star and Logo Styling */
+.stars {
+    font-size: 1.5rem;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.google-logo {
+    font-size: 3rem;
+    color: #c84563;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Title, Links, and Buttons */
+.gcard h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.gcard p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.gcard a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.gcard button {
+    background-color: #c84563;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    cursor: pointer;
+    width: 10%;
+    margin: 0 auto; /* Center the button */
+    display: block; /* Force button to behave as a block element */
+}
+
+.gcard button:hover {
+    background-color: #a93451;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .google-reviews .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .review-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* General Styling for All Sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Intro Section */
+.reviews-header {
+    text-align: center; /* Center align the text */
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+    margin: 20px 0; /* Add space around the section */
+}
+
+.reviews-header h2 {
+    font-size: 2.2rem; /* Large, prominent font size for the heading */
+    color: #16223b; /* Dark navy color for the heading */
+    font-weight: bold; /* Make the heading bold */
+    margin-bottom: 10px; /* Add space between the heading and paragraph */
+}
+
+.reviews-header p {
+    font-size: 1.1rem; /* Slightly smaller font size for the paragraph */
+    color: #6c757d; /* Grayish color for the text */
+    line-height: 1.6; /* Improve readability */
+    max-width: 800px; /* Limit the width of the paragraph */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Reviews Carousel Section */
+.reviews-carousel {
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+.review-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #c84563;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.stars {
+    color: gold;
+    font-size: 1rem;
+}
+
+.swiper-container {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pagination Styling */
+.swiper-pagination {
+    margin-top: 15px;
+}
+
+/* Adjust reviews for a static layout when Swiper is not initialized */
+.reviews-carousel .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Wrap the reviews if there are fewer */
+    justify-content: center; /* Center-align static reviews */
+    gap: 20px; /* Add spacing between cards */
+}
+
+.reviews-carousel .swiper-slide {
+    flex: 1 1 calc(25% - 20px); /* Set a flexible width for each review */
+    max-width: 300px;
+}
+
+/* contact Section */
+/* .parallax-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f8f9fa; /* Fallback background color 
+} */
+
+/* .parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/temple4.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+.contact-header h2 {
+    font-size: 2.8rem;
+    color: #c84563;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 40px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-info h4 {
+    color: #c84563;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-info h2 {
+    color: #16223b;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-info address,
+.contact-info p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.contact-info hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-form h4 {
+    color: #c84563;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-form p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: #c84563;
+    color: #fff;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.contact-form button:hover {
+    background-color: #a93451;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+} */
+
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f8f9fa; /* Fallback background color */
+}
+
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/temple4.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+.contact-header h2 {
+    font-size: 2.8rem;
+    color: #c84563;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-info h4 {
+    color: #c84563;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-info h2 {
+    color: #16223b;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-info address,
+.contact-info p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.contact-info hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-form h4 {
+    color: #c84563;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-form p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: #c84563;
+    color: #fff;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.contact-form button:hover {
+    background-color: #a93451;
+}
+
+/* .parallax-section::before {
+    content: ' ';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/temple4.jpg') no-repeat center center;
+    background-size: 60%;
+    z-index: -2;
+    transform: translateY(0);
+    will-change: transform;
+} */
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+}
+
+/* Style for the links to display in one line and remove underlines */
+.col-lg-3 .btn-link {
+    display: inline-block; /* Makes links display on the same line */
+    margin-right: 15px; /* Adds some space between the links */
+    text-decoration: none; /* Removes the underline from the links */
+    color: #fff; /* Sets text color to white (or choose your desired color) */
+}
+
+.col-lg-3 .btn-link:hover {
+    text-decoration: none; /* Ensures there's no underline on hover */
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+  }
