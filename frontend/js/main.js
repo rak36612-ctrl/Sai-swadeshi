@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
           };
 
           try {
-              const response = await fetch('https://saiswadeshi.in/api/registration', {
+              const response = await fetch('https://sai-swadeshi.onrender.com/api/registration', {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json'
@@ -180,7 +180,7 @@ if (contactFormEl) {
         const formData = { name, phone, email, message, recaptchaResponse };
 
         try {
-            const response = await fetch("https://saiswadeshi.in/api/contact", {
+            const response = await fetch("https://sai-swadeshi.onrender.com/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
