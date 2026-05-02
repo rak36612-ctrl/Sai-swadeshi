@@ -100,17 +100,31 @@
 
 /* Mobile Responsiveness for Hero Images */
 @media (max-width: 768px) {
-    .hero-container,
-    .owl-carousel .item {
+    .hero-container {
         height: auto;
-        min-height: 50vh; /* Shorter hero section on mobile to fit the screen */
     }
     
+    .owl-carousel .item,
     .owl-carousel .item img {
-        height: 50vh;
-        position: relative;
-        top: 0;
-        object-fit: cover; /* Prevents stretching and cropping awkwardly */
+        height: 60vh; /* Better fit for mobile to avoid whitespace */
+        object-fit: cover;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem !important; /* Scale text down */
+        white-space: normal;
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem !important;
+    }
+    
+    .single-line, .centered-text {
+        font-size: 28px !important;
+        white-space: normal !important;
+        word-wrap: break-word;
     }
 }
 
