@@ -144,21 +144,6 @@ function toggleArrow(arrowId) {
     }
 }
   
-document.addEventListener("DOMContentLoaded", () => {
-    const navCollapse = document.querySelector(".navbar-collapse");
-    const navToggler = document.querySelector(".navbar-toggler");
-
-    navToggler.addEventListener("click", () => {
-        setTimeout(() => {
-            if (navCollapse.classList.contains("show")) {
-                navCollapse.style.height = "auto";
-            } else {
-                navCollapse.style.height = "0";
-            }
-        }, 200); // Adjust delay if needed
-    });
-});
-
 //contact
 
 const contactFormEl = document.getElementById("contactForm");

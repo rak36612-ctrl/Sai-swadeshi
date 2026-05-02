@@ -1327,8 +1327,10 @@ nav input {
 
 .parallax-section {
     position: relative;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    height: auto;
+    padding: 60px 0;
+    overflow: visible;
     background-color: #f8f9fa; /* Fallback background color */
 }
 
