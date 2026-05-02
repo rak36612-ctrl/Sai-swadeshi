@@ -2,10 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
+dotenv.config({ path: path.join(__dirname, '.env') });
+
 const connectDB = require('./config/db');
 const registrationRoutes = require('./routes/registrationRoute');
 const Contact = require('./models/contact');
-dotenv.config();
 const twilio = require("twilio");
 
 //connect to database
@@ -30,10 +32,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/registration", registrationRoutes);
 
 
-//Base Route
+const client = new twilio(accountSid, authToken);
+
+// Base Route
 app.get('/', (req, res) => {
     res.send('API is running...');
-    console.log();
 });
 
 //contact
@@ -56,92 +59,28 @@ app.get('/', (req, res) => {
 // }
 
 // Handle Contact Form Submission
-app.post("/contact", async (req, res) => {
-    const { name, phone, email, message, recaptchaResponse } = req.body;
-
-    // if (!recaptchaResponse) {
-    //     return res.status(400).json({ error: "reCAPTCHA verification failed" });
-    // }
-
-    // const isHuman = await verifyRecaptcha(recaptchaResponse);
-    // if (!isHuman) {
-    //     return res.status(400).json({ error: "reCAPTCHA verification failed" });
-    // }
+app.post("/api/contact", async (req, res) => {
+    const { name, phone, email, message } = req.body;
 
     const newContact = new Contact({ name, phone, email, message });
 
     try {
         await newContact.save();
-        res.status(200).json({ message: "Form submitted successfully" });
-    } catch (error) {
-        res.status(500).json({ error: "Failed to save data" });
-    }
-});
-
-const client = new twilio(accountSid, authToken);
-
-app.post("/send-sms", (req, res) => {
-    const { fullName, phone, email, serviceDescription, message } = req.body;
-    
-    const smsMessage = `New Registration:\n
-    Name: ${fullName}\n
-    Phone: ${phone}\n
-    Email: ${email}\n
-    Service: ${serviceDescription}\n
-    Message: ${message}`;
-
-    client.messages
-        .create({
-            body: smsMessage,
-            from: twilioPhone,
-            to: adminPhone
-        })
-        .then(message => {
-            console.log("SMS Sent: " + message.sid);
-            res.status(200).json({ success: true, msg: "SMS Sent" });
-        })
-        .catch(err => {
-            console.error("Error sending SMS: ", err);
-            res.status(500).json({ success: false, msg: "Error sending SMS" });
-        });
-});
-
-// Handle Contact Form Submission
-app.post("/api/contact", async (req, res) => {
-    const { name, phone, email, message, recaptchaResponse } = req.body;
-
-    // Verify reCAPTCHA
-    // const secretKey = "6LffKfQqAAAAAPpKn11NkHtYBgP7tGlACkuZS0IE";
-    // const recaptchaURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaResponse}`;
-
-    // const recaptchaRes = await fetch(recaptchaURL, { method: "POST" });
-    // const recaptchaData = await recaptchaRes.json();
-
-    // if (!recaptchaData.success) {
-    //     return res.status(400).json({ error: "reCAPTCHA verification failed" });
-    // }
-
-    // Send SMS Notification
-    const smsBody = `New Contact Form Submission:\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`;
-    
-    try {
+        
+        // Send SMS Notification
+        const smsBody = `New Contact Form Submission:\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`;
         await client.messages.create({
             body: smsBody,
             from: twilioPhone,
             to: adminPhone
         });
 
-        res.json({ message: "Message sent successfully!" });
+        res.status(200).json({ message: "Form submitted successfully" });
     } catch (error) {
-        console.error("Error sending SMS:", error);
-        res.status(500).json({ error: "Failed to send SMS" });
+        console.error("Error in contact route:", error);
+        res.status(500).json({ error: "Failed to save data or send SMS" });
     }
 });
-
-app.post('/api/registration', (req, res) => {
-    console.log(req.body); // Check what data is received
-});
-
 
 //start server
 app.listen(PORT, () => {

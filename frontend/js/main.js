@@ -6,8 +6,8 @@ $(document).ready(function () {
       autoplay: true,
       autoplayTimeout: 3000,
       items: 1
-    } });
- } });
+    });
+});
 
   // Quick service
 
@@ -43,8 +43,8 @@ const buttons = document.querySelectorAll('.redirect-button');
 buttons.forEach(button => {
     button.addEventListener('click', function () {
         window.open(commonLink, '_blank'); // Open the common link in a new tab
-    } });
-} });
+    });
+});
 // Review
 // document.addEventListener('DOMContentLoaded', function () {
 //   const swiper = new Swiper('.swiper-container', {
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
                       'Content-Type': 'application/json'
                   },
                   body: JSON.stringify(formData) // Send the data as JSON
-              } });
+              });
 
               const data = await response.json();
 
@@ -120,11 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
               console.error('Error:', error);
               alert('There was an error submitting the form');
           }
-      } });
+      });
   } else {
       console.error('Form or input elements not found!');
   }
-} });
+});
 
 
 // Function to toggle the arrow direction on collapse show/hide
@@ -156,8 +156,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 navCollapse.style.height = "0";
             }
         }, 200); // Adjust delay if needed
-    } });
-} });
+    });
+});
 
 //contact
 
