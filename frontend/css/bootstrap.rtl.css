@@ -12028,3 +12028,9 @@ textarea.form-control-lg {
   }
 }
 /*# sourceMappingURL=bootstrap.rtl.css.map */
+
+/* Global Overrides */
+.banner img { width: 100vw !important; height: 100vh !important; object-fit: cover !important; }
+.navbar { background-color: transparent !important; }
+@media (max-width: 991.98px) { .navbar-collapse { background-color: rgba(34, 34, 34, 0.8) !important; } }
+.carousel-item { background: transparent !important; }
