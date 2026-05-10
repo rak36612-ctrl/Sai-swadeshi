@@ -142,25 +142,19 @@
 .hero-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full viewport height */
-    background-color: #0b0c10; /* Sleek dark background for letterboxing */
 }
 
 .owl-carousel .item {
     position: relative;
-    height: 100vh;
-    background-color: #0b0c10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    display: block;
     overflow: hidden;
 }
 
 .owl-carousel .item img {
-    height: 100vh;
     width: 100%;
-    object-fit: contain; /* Forces fully original uncropped photos */
-    object-position: center;
+    height: auto; /* Automatically scales based on original aspect ratio */
+    display: block;
 }
 
 /* Dark overlay for better text legibility on hero slider */
@@ -200,14 +194,10 @@
 
 /* Mobile Responsiveness for Hero Images */
 @media (max-width: 768px) {
-    .hero-container {
-        height: 80vh; /* Adjust height slightly on mobile to balance text/image */
-    }
-    
+    .hero-container,
     .owl-carousel .item,
     .owl-carousel .item img {
-        height: 80vh;
-        object-fit: contain; /* Keep photos uncropped on mobile */
+        height: auto; /* Let it grow naturally with the uncropped photo */
     }
 
     .carousel-caption {
