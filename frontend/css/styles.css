@@ -143,21 +143,24 @@
     position: relative;
     width: 100%;
     height: 100vh; /* Full viewport height */
-}
-
-.owl-carousel .item img {
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+    background-color: #0b0c10; /* Sleek dark background for letterboxing */
 }
 
 .owl-carousel .item {
     position: relative;
     height: 100vh;
-    background-size: cover;
-    background-position: center;
+    background-color: #0b0c10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+}
+
+.owl-carousel .item img {
+    height: 100vh;
+    width: 100%;
+    object-fit: contain; /* Forces fully original uncropped photos */
+    object-position: center;
 }
 
 /* Dark overlay for better text legibility on hero slider */
@@ -198,15 +201,19 @@
 /* Mobile Responsiveness for Hero Images */
 @media (max-width: 768px) {
     .hero-container {
-        height: auto;
+        height: 80vh; /* Adjust height slightly on mobile to balance text/image */
     }
     
     .owl-carousel .item,
     .owl-carousel .item img {
-        height: 100vh; /* Stretch to fill the blank white space */
-        object-fit: cover;
+        height: 80vh;
+        object-fit: contain; /* Keep photos uncropped on mobile */
     }
 
+    .carousel-caption {
+        padding: 0 10px;
+    }
+    
     .carousel-caption h1 {
         font-size: 2rem !important; /* Scale text down */
         white-space: normal;
