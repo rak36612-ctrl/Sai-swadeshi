@@ -133,7 +133,6 @@
     background-size: cover; /* Make the background image cover the page */
     background-position: center center; /* Center the background image */
     background-attachment: fixed; /* Make the background fixed when scrolling */
-    height: 100vh; /* Full viewport height */
     margin: 0;
     padding-top:1px; /* Add padding for navbar height */
 }
@@ -791,8 +790,7 @@ nav input {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    margin: 30px 0;
-    margin-top: 800px;
+    margin: 50px 0 30px;
 }
 
 .carousel-heading h4{
@@ -1639,12 +1637,12 @@ h1 {
 .slider-row::-webkit-scrollbar { display: none; } .slider-row { -ms-overflow-style: none; scrollbar-width: none; } @media (max-width: 991.98px) { .slider-row .col-md-4 { min-width: 80%; } }
 
 .banner img { width: 100vw !important; height: 100vh !important; object-fit: cover !important; }
-.navbar { background-color: transparent !important; }
+.navbar { background-color: rgba(0, 0, 0, 0.6) !important; }
 .navbar-collapse { background-color: rgba(34, 34, 34, 0.8) !important; }
 .carousel-item { background: transparent !important; }
 
 /* Global Overrides */
 .banner img { width: 100vw !important; height: 100vh !important; object-fit: cover !important; }
-.navbar { background-color: transparent !important; }
+.navbar { background-color: rgba(0, 0, 0, 0.6) !important; }
 @media (max-width: 991.98px) { .navbar-collapse { background-color: rgba(34, 34, 34, 0.8) !important; } }
 .carousel-item { background: transparent !important; }
