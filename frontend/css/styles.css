@@ -134,7 +134,7 @@
     background-position: center center; /* Center the background image */
     background-attachment: fixed; /* Make the background fixed when scrolling */
     margin: 0;
-    padding-top:1px; /* Add padding for navbar height */
+    padding-top: 120px; /* Add padding matching the navbar height to push hero image below */
 }
 
 /* Hero Section (Image with Navbar Inside) */
