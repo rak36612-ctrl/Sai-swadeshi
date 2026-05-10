@@ -11,6 +11,20 @@ if (typeof $ !== 'undefined') {
     });
 }
 
+// Fade out loader once the page is fully loaded
+window.addEventListener('load', function() {
+    const loader = document.getElementById('launch-loader');
+    if (loader) {
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            loader.style.visibility = 'hidden';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 600); // Wait for transition to complete
+        }, 1500); // Display the animation for at least 1.5 seconds
+    }
+});
+
   // Quick service
 
   //prevent non numeric input  in the phone number field
